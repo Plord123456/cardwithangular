@@ -1,0 +1,32 @@
+<div id="card-container">
+  @for (prod of this.cartService.products; track $index) {
+    <div class="card-holder">
+      <app-card
+        [id]="prod.id"
+        [name]="prod.name"
+        [price]="prod.price"
+        [description]="prod.description"
+        [inStock]="prod.inStock"
+      ></app-card>
+    </div>
+  }
+</div>
+@for (item of cartService.cart; track $index) {
+  <h2>{{ item.name }}</h2>
+  <h2>{{ item.price }}</h2>
+  <h2>{{ item.quantity }}</h2>
+  <button (click)="removeFromCart($index)">remove</button>
+}
+<div *ngFor="let item of cartService.cart; let i = index">
+  <h2>{{ item.name }}</h2>
+  <h2>{{ item.price | currency }}</h2>
+  <h2>{{ item.quantity }}</h2>
+  <button (click)="removeFromCart(i)">Remove</button>
+</div>
+
+@for (item of cartService.cart; track $index) {
+  <h3>Total Bill: {{ cartService.totalBill | currency }}</h3>
+}
+
+
+

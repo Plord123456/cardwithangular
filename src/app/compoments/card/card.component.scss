@@ -1,0 +1,21 @@
+
+.card-holder {
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  //border: 1px solid black;
+  //background-color: cadetblue;
+  margin: 10px;
+  border-radius: 10px;
+
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

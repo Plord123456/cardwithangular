@@ -1,0 +1,33 @@
+<div id="card-container">
+  <div class="card-holder">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+
+    </mat-card>
+
+
+    <h2>{{ name }}</h2>
+    <h3>{{ description }}</h3>
+    <h3>{{ price }}</h3>
+    <h4>{{ inStock }}</h4>
+    <button (click)="
+            addToCart({
+            id: this.id,
+            name: this.name,
+            price: this.price,
+            quantity: 1,
+
+            })
+" mat-flat-button color="primary"
+    >Add to cart
+    </button>
+
+  </div>
+
+</div>
